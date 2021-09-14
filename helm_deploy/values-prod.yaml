@@ -2,5 +2,6 @@
 # Per environment values which override defaults in hmpps-audit-poc-api/values.yaml
 
 generic-service:
+  replicaCount: 2
   ingress:
     host: hmpps-audit-poc-api.hmpps.service.justice.gov.uk
