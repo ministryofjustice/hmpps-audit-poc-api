@@ -6,6 +6,7 @@ generic-service:
 
   ingress:
     host: hmpps-audit-poc-api-preprod.hmpps.service.justice.gov.uk
+    contextColour: green
 
 # CloudPlatform AlertManager receiver to route promethues alerts to slack
 # See https://user-guide.cloud-platform.service.justice.gov.uk/documentation/monitoring-an-app/how-to-create-alarms.html#creating-your-own-custom-alerts
