@@ -23,9 +23,10 @@ jobs:
             - gradle-{{ checksum "build.gradle.kts" }}
             - gradle-
       - run:
-          command:
-            ./gradlew dependencyCheckPurge
-            ./gradlew check
+          name: Generate code coverage report
+          command: ./gradlew dependencyCheckPurge
+      - run:
+          command: ./gradlew check
       - save_cache:
           paths:
             - ~/.gradle
