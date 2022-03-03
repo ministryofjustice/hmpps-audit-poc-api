@@ -23,6 +23,9 @@ jobs:
             - gradle-{{ checksum "build.gradle.kts" }}
             - gradle-
       - run:
+          name: Purge owasp dependency check
+          command: ./gradlew dependencyCheckPurge
+      - run:
           command: ./gradlew check
       - save_cache:
           paths:
