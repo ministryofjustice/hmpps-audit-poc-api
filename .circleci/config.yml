@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  hmpps: ministryofjustice/hmpps@3.11
+  hmpps: ministryofjustice/hmpps@3.14
 
 parameters:
   alerts-slack-channel:
@@ -22,9 +22,6 @@ jobs:
           keys:
             - gradle-{{ checksum "build.gradle.kts" }}
             - gradle-
-      - run:
-          name: Purge owasp dependency check
-          command: ./gradlew dependencyCheckPurge
       - run:
           command: ./gradlew check
       - save_cache:
@@ -94,7 +91,7 @@ workflows:
   security:
     triggers:
       - schedule:
-          cron: "45 15 * * 1-5"
+          cron: "45 11 * * 1-5"
           filters:
             branches:
               only:
