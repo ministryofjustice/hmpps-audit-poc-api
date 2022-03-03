@@ -91,11 +91,11 @@ workflows:
   security:
     triggers:
       - schedule:
-          cron: "5 12 * * 1-5"
+          cron: "57 5 * * 1-5"
           filters:
             branches:
               only:
-                - sm-HAAR-186-plugin-update
+                - main
     jobs:
       - hmpps/gradle_owasp_dependency_check:
           slack_channel: << pipeline.parameters.alerts-slack-channel >>
