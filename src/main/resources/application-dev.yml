@@ -3,3 +3,10 @@ server:
 
 oauth:
   endpoint.url: http://localhost:9090/auth
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: classpath:local-public-key.pub
