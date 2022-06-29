@@ -5,3 +5,5 @@ generic-service:
   replicaCount: 2
   ingress:
     host: hmpps-audit-poc-api.hmpps.service.justice.gov.uk
+  env:
+    OAUTH_ENDPOINT_URL: "https://sign-in.hmpps.service.justice.gov.uk/auth"
