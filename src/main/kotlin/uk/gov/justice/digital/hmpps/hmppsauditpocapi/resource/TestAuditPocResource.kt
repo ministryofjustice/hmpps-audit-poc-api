@@ -26,6 +26,7 @@ class TestAuditPocResource {
   fun postTestDataNoRoles(@RequestBody insertTestData: TestDto): TestDto = insertTestData.copy(result = "posted", processed = true)
 
   @PreAuthorize("hasAnyRole('ROLE_TESTING', 'ROLE_AUDIT') and hasAuthority('SCOPE_write')")
+
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping("/with-role")
   fun postTestData(
