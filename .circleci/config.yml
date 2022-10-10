@@ -115,7 +115,7 @@ workflows:
           context:
             - veracode-credentials
             - hmpps-common-vars
-  securit y-weekly:
+  security-weekly:
     triggers:
       - schedule:
           cron: "55 5 * * 1"
