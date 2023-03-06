@@ -23,26 +23,26 @@ class TestAuditPocResource {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  fun postTestDataNoRoles(@RequestBody insertTestData: TestDto): TestDto = insertTestData.copy(result = "posted", processed = true)
-
-  @PreAuthorize("hasAnyRole('ROLE_TESTING', 'ROLE_AUDIT') and hasAuthority('SCOPE_write')")
+  fun postTestDataNoRoles(@RequestBody insertTestData: TestDto): TestDto =
+    insertTestData.copy(result = "posted", processed = true)
 
   @ResponseStatus(HttpStatus.CREATED)
+  @PreAuthorize("hasAnyRole('ROLE_TESTING', 'ROLE_AUDIT') and hasAuthority('SCOPE_write')")
   @PostMapping("/with-role")
   fun postTestData(
-    @RequestBody insertTestData: TestDto
+    @RequestBody insertTestData: TestDto,
   ): TestDto = insertTestData.copy(result = "posted with role", processed = true)
 
   @PreAuthorize("hasAuthority('SCOPE_write')")
   @PutMapping
   fun putTestDataNoRoles(
-    @RequestBody updateTestData: TestDto
+    @RequestBody updateTestData: TestDto,
   ): TestDto = updateTestData.copy(result = "put", processed = true)
 
   @PreAuthorize("hasAnyRole('ROLE_TESTING', 'ROLE_AUDIT') and hasAuthority('SCOPE_write')")
   @PutMapping("/with-role")
   fun putTestData(
-    @RequestBody updateTestData: TestDto
+    @RequestBody updateTestData: TestDto,
   ): TestDto = updateTestData.copy(result = "put with role", processed = true)
 }
 
