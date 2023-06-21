@@ -3,13 +3,15 @@
 
 generic-service:
   replicaCount: 2
+  serviceAccountName: hmpps-audit-poc-api
 
   ingress:
-    host: hmpps-audit-poc-api-dev.hmpps.service.justice.gov.uk
+    host: audit-poc-api-dev.hmpps.service.justice.gov.uk
 
   env:
     OAUTH_ENDPOINT_URL: "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
     APPLICATIONINSIGHTS_CONFIGURATION_FILE: applicationinsights.dev.json
+    HMPPS_SQS_USE_WEB_TOKEN: "true"
 
 # CloudPlatform AlertManager receiver to route promethues alerts to slack
 # See https://user-guide.cloud-platform.service.justice.gov.uk/documentation/monitoring-an-app/how-to-create-alarms.html#creating-your-own-custom-alerts
