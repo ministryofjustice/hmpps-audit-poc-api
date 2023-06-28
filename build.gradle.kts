@@ -1,5 +1,5 @@
 plugins {
-  id("uk.gov.justice.hmpps.gradle-spring-boot") version "5.2.1"
+  id("uk.gov.justice.hmpps.gradle-spring-boot") version "5.2.2"
   kotlin("plugin.spring") version "1.8.22"
 }
 
@@ -19,7 +19,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 
-  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.496"))
+  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.497"))
 }
 
 java {
