@@ -77,7 +77,7 @@ workflows:
           pipeline_number: <<pipeline.number>>
           context:
             - hmpps-common-vars
-            - hmpps-audit-poc-api-preprod
+            - hmpps-audit-poc-preprod
           requires:
             - request-preprod-approval
       - request-prod-approval:
@@ -95,7 +95,7 @@ workflows:
           slack_channel_name: << pipeline.parameters.releases-slack-channel >>
           context:
             - hmpps-common-vars
-            - hmpps-audit-poc-api-prod
+            - hmpps-audit-poc-prod
           requires:
             - request-prod-approval
 

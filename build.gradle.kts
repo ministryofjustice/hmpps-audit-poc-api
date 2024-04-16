@@ -14,12 +14,12 @@ repositories {
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
   implementation("org.springframework.boot:spring-boot-starter-security")
-  implementation("uk.gov.justice.service.hmpps:hmpps-sqs-spring-boot-starter:3.1.1")
+  implementation("uk.gov.justice.service.hmpps:hmpps-sqs-spring-boot-starter:3.1.2")
 
   implementation("org.springframework.boot:spring-boot-starter-webflux")
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.4.0")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 
-  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.689"))
+  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.701"))
 }
 
 kotlin {
