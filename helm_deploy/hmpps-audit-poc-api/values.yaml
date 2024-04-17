@@ -1,5 +1,5 @@
 generic-service:
-  nameOverride: hmpps-audit-poc-api
+  nameOverride: hmpps-audit-poc
   productId: "DPS018"
 
   replicaCount: 4
