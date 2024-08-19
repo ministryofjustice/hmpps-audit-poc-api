@@ -1,6 +1,6 @@
 plugins {
-  id("uk.gov.justice.hmpps.gradle-spring-boot") version "6.0.1"
-  kotlin("plugin.spring") version "2.0.0"
+  id("uk.gov.justice.hmpps.gradle-spring-boot") version "6.0.3"
+  kotlin("plugin.spring") version "2.0.10"
 }
 
 configurations {
@@ -17,9 +17,9 @@ dependencies {
   implementation("uk.gov.justice.service.hmpps:hmpps-sqs-spring-boot-starter:4.0.0")
 
   implementation("org.springframework.boot:spring-boot-starter-webflux")
-  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
 
-  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.749"))
+  implementation(platform("com.amazonaws:aws-java-sdk-bom:1.12.769"))
 }
 
 kotlin {
