@@ -12,7 +12,16 @@ generic-service:
     OAUTH_ENDPOINT_URL: "https://sign-in-dev.hmpps.service.justice.gov.uk/auth"
     APPLICATIONINSIGHTS_CONFIGURATION_FILE: applicationinsights.dev.json
     HMPPS_SQS_USE_WEB_TOKEN: "true"
-    APPLICATIONINSIGHTS_IP_ALLOWLIST_GROUPS_YAML: .Values.allowlist_groups
+
+
+  allowlist_envs:
+    CLIENT_ALLOWLIST_GP:
+      groups:
+        - moj_cloud_platform
+    CLIENT_ALLOWLIST_CP:
+      groups:
+        - internal
+
 
 # CloudPlatform AlertManager receiver to route promethues alerts to slack
 # See https://user-guide.cloud-platform.service.justice.gov.uk/documentation/monitoring-an-app/how-to-create-alarms.html#creating-your-own-custom-alerts
