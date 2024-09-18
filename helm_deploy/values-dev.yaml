@@ -15,12 +15,10 @@ generic-service:
 
 
   allowlist_envs:
-    CLIENT_ALLOWLIST_GROUPS:
-      - groups
-    CLIENT_ALLOWLIST_GP:
+    CLIENT_ALLOWLIST_CP:
       groups:
         - moj_cloud_platform
-    CLIENT_ALLOWLIST_CP:
+    CLIENT_ALLOWLIST_GP:
       groups:
         - internal
 
