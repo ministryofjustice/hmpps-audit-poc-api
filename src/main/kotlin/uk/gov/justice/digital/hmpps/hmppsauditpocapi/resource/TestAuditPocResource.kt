@@ -23,8 +23,7 @@ class TestAuditPocResource {
 
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping
-  fun postTestDataNoRoles(@RequestBody insertTestData: TestDto): TestDto =
-    insertTestData.copy(result = "posted", processed = true)
+  fun postTestDataNoRoles(@RequestBody insertTestData: TestDto): TestDto = insertTestData.copy(result = "posted", processed = true)
 
   @ResponseStatus(HttpStatus.CREATED)
   @PreAuthorize("hasAnyRole('ROLE_TESTING', 'ROLE_AUDIT') and hasAuthority('SCOPE_write')")
