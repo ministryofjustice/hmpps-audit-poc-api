@@ -1,9 +1,0 @@
----
-# Per environment values which override defaults in hmpps-audit-poc-api/values.yaml
-
-generic-service:
-  replicaCount: 2
-  ingress:
-    host: audit-poc-api.hmpps.service.justice.gov.uk
-  env:
-    OAUTH_ENDPOINT_URL: "https://sign-in.hmpps.service.justice.gov.uk/auth"
